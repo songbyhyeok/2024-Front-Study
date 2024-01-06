@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        ul {
+            list-style-type: disc;
+        }
+
+        ul {
+            list-style-type: circle;
+        }
+
+        ul {
+            list-style-type: armenian;
+        }
+    </style>
+    <title>목록 태그 연습</title>
+</head>
+
+<body>
+
+    <!-- 목록 태그명의 자식은 반드시 li 태그로 구조화 한다.
+ex <ul> <li></li></ul> -->
+
+    <!-- 목록 태그명>li*ea 자동 생성 명령어 -->
+    <!-- ex ul>li*5 -->
+
+    <!-- 순서가 필요하지 않는 목록 태그 -->
+    <!-- 리스트 앞에 특정 모양이 출력된다. (css 사용 시 모양 수정 가능) -->
+    <ul>
+        <li>사과</li>
+        <li>포도</li>
+        <li>바나나</li>
+    </ul>
+
+    <!-- 순서가 있는 목록 만들 때 사용 -->
+    <!-- 속성 type 사용 시 리스트 앞에 순서 표기 형식을 바꿀 수 있다. -->
+    <ol>
+        <li>홍길동</li>
+        <li>유관순</li>
+        <li>이순신</li>
+    </ol>
+
+    <ol type="I">
+        <li>홍길동</li>
+        <li>유관순</li>
+        <li>이순신</li>
+    </ol>
+
+    <ol type="1" start="5">
+        <li>홍길동</li>
+        <li>유관순</li>
+        <li>이순신</li>
+    </ol>
+
+    <ol reversed="reversed">
+        <li>홍길동</li>
+        <li>유관순</li>
+        <li>이순신</li>
+    </ol>
+
+    <!-- 설명 목록 태그다. 용어나 문장에 대한 정의 리스트 -->
+    <dl>
+        <dt>정의제목</dt>
+        <dd>정의내용1</dd>
+        <dd>정의내용2</dd>
+    </dl>
+</body>
+
+</html>

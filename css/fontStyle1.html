@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+        /* * {
+            margin: 0px;
+            padding: 0px;
+        } */
+
+        html {
+            /* font-family: serif, monospace; */
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 16px;
+        }
+
+        .title {
+            font-size: 21px;
+            color: #cb5e1a61;
+        }
+
+        .content {
+            font-size: 18px;
+        }
+
+        .font-italic {
+            font-style: italic;
+        }
+
+        .font-weight-bold {
+            font-weight: bold;
+        }
+
+        .font-weight-300 {
+            font-weight: 300;
+        }
+
+        .font-variant {
+            font-variant: small-caps;
+        }
+
+        .subtitle {
+            font-size: 20px;
+        }
+
+        .subtitle-rem {
+            /* html font-size에 배수만큼 증가(최상위 요소의 배수) */
+            font-size: 2rem;
+        }
+
+        .emDiv {
+            font-size: 30px;
+        }
+
+        .subtitle-em {
+            /* 현재 상속된 font-size 기준 배수만큼 증가 */
+            font-size: 2em;
+        }
+
+        .rec.width {
+            width: 100vw;
+            height: 100px;
+            background-color: brown;
+        }
+        .rec.height {
+            height: 20vh;
+            width: 100px;
+            background-color: blue;
+        }
+    </style>
+    <title>폰트 스타일1</title>
+</head>
+
+<body>
+    <h2 class="title">백곰 채널</h2>
+    <p class="content">깊고 통찰력을 통해 좋은 코드를 만들어나갑니다.</p>
+    <p class="content font-italic">깊고 통찰력을 통해 좋은 코드를 만들어나갑니다.</p>
+    <p class="content font-weight-bold">깊고 통찰력을 통해 좋은 코드를 만들어나갑니다.</p>
+    <p class="content font-weight-300">깊고 통찰력을 통해 좋은 코드를 만들어나갑니다.</p>
+    <p class="content font-variant">hello, hyeok</p>
+    <hr>
+    <h2>px</h2>
+    <p class="subtitle">깊고 통찰력을 통해 좋은 코드를 만들어나갑니다.</p>
+    <h2>rem</h2>
+    <p class="subtitle-rem">깊고 통찰력을 통해 좋은 코드를 만들어나갑니다.</p>
+    <h2>em</h2>
+    <div class="emDiv">
+        <p class="subtitle-em">깊고 통찰력을 통해 좋은 코드를 만들어나갑니다.</p>
+    </div>
+    <hr>
+    <!-- viewport width(브라우저 사이즈) -->
+    <!-- 100vw = 브라우저 사이즈 -->
+    <!-- 50vw = 브라우저 사이즈/2 -->
+    <h2>vw</h2>
+    <div class="rec width"></div>
+    <!-- viewport height(브라우저 사이즈) -->
+    <h2>vh</h2>
+    <div class="rec height"></div>
+</body>
+
+</html>

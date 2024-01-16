@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        a {
+            font-size: 30px;
+        }
+
+        a:link {
+            color: cyan;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        a:hover {
+            color: blue;
+            font-weight: 900;
+        }
+
+        a:active {
+            color: yellow;
+        }
+
+        fieldset:hover {
+            background-color: lightgrey;
+            box-shadow: 0 0 20px grey;
+        }
+
+        input:focus {
+            outline: none;
+            border: 3px solid red;
+            box-shadow: 0 0 20px rgb(255, 117, 117);
+        }
+
+        .field {
+            margin-bottom: 10px;
+        }
+
+        li:nth-child(odd) {
+            background-color: yellow;
+        }
+
+        li:not(.target) {
+            font-size: 30px;
+        }
+
+        /* 가상 요소 */
+        .required::before {
+            content: '*';
+            margin-right: 2px;
+            color: red;
+            font-size: 18px;
+        }
+
+        [data-tooltip] {
+            position: relative;
+        }
+
+        [data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: 0px;
+            left: 56px;
+            background-color: black;
+            color: white;
+            width: 200px;
+        }
+
+        .letter::first-letter {
+            font-size: 60px;
+            color: blue;
+        }
+
+        .line::first-line {
+            background-color: yellow;
+            color: blue;
+            font-size: 20px;
+        }
+
+        p::selection {
+            background-color: red;
+            color: white;
+        }
+    </style>
+    <title>가상클래스, 가상요소 실습</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Pseudo Class</legend>
+        <div>
+            <a href="https://naver.com">네이버</a>
+            <a href="https://kakao.com">카카오</a>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>focus, before, after</legend>
+        <div class="field">
+            <label for="name" class="required">이름</label>
+            <input type="text" id="name">
+        </div>
+        <div class="field">
+            <label class="required" for="age">나이</label>
+            <input type="text" id="age" />
+        </div>
+        <button data-tooltip="이 버튼을 클릭하여 정보를 보내세요!">보내기</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>nth-child, not</legend>
+        <ul>
+            <li class="target">1content</li>
+            <li>2content</li>
+            <li>3content</li>
+            <li>4content</li>
+            <li>5content</li>
+        </ul>
+    </fieldset>
+
+    <fieldset>
+        <legend>first-letter, first-line, section</legend>
+        <div>
+            <p class="letter">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, commodi rerum at consequatur autem a
+                dicta nesciunt similique error quod exercitationem odio. Tenetur distinctio consequatur animi dolorum
+                alias enim ea!
+                Corporis quibusdam laudantium fugiat optio, possimus earum quidem impedit, animi maxime quisquam
+                molestiae iusto. Numquam aliquid recusandae eius esse magnam praesentium, consectetur repellendus error
+                velit ducimus, sunt excepturi quos vitae.
+                Quis alias vero cum iusto consectetur fuga nesciunt ipsum, hic corrupti aspernatur. Vitae sequi, unde
+                tenetur incidunt error tempora, asperiores quod ipsam ullam facilis voluptas consequatur atque, modi
+                itaque quas.
+            </p>
+            <p class="line">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate qui, laborum ad cumque fuga ut ab
+                nesciunt vero. Dignissimos ad ullam vero adipisci porro ut optio animi corporis
+                veritatis dicta! Quod obcaecati est perferendis alias atque qui amet eius fugiat, placeat suscipit
+                dolore. Minima repellendus vero quis quae, cum, earum id tempora autem at aspernatur animi
+                saepe et voluptatum nulla.
+            </p>
+        </div>
+    </fieldset>
+</body>
+
+</html>

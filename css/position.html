@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        main, section, article, div {
+            border: 1px solid black;
+            padding: 20px
+        }
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+            background: yellow;
+        }
+        section {
+            background: violet;
+            position: relative;
+        }
+        article {
+            background: cyan;
+        }
+        div {
+            background: white;
+        }
+        div.relative {
+            position: relative;
+            right: 20px;
+        }
+        div.absolute {
+            position: absolute;
+            background: grey;
+            top: 0px;
+            left: 20px;
+            right: 20px;
+        }
+        div.fixed {
+            position: fixed;
+            background: blue;
+            bottom: 30px;
+            right: 30px;
+            border-radius: 50%;
+        }
+        div.sticky {
+            position: sticky;
+            top: 100px;
+        }
+    </style>
+    <title>Position 실습</title>
+</head>
+<body>
+    <main>
+        <section>
+            <article>
+                <div></div>
+                <div class="relative">relative</div>
+                <div class="absolute">absolute</div>
+                <div class="fixed">fixed</div>
+                <div class="sticky">sticky</div>
+                <div style="height: 1000px"></div>
+            </article>
+        </section>
+    </main>
+</body>
+</html>
